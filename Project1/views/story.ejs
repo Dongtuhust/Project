@@ -1,0 +1,101 @@
+<html>
+<header>
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico|Satisfy" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="story.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="socket.io/socket.io.js"></script>
+  <script>
+  var socket =io("http://loclhost:3000");
+  $(document).ready(funcion(){
+    $("#story").click(fuction(){
+	    socket.emit("yeu_cau");
+	})
+  }
+  socket.on('phan_hoi',function(data){
+  $("#message").html(story.story);
+   $("#title").html(story.title);
+  });
+   </script>
+    <script>
+    var socket = io("http://localhost:3000");
+    $(document).ready(function(){
+      $("#story").click(function(){
+        socket.emit("yeu_cau");
+      })
+    })
+    socket.on('phan_hoi', function(data){
+        $("#message").html(data.story);
+        $("#title").html(data.title);
+     });
+    </script>
+  <title>Story</title>
+</header>
+<body>
+<!--<form action="http://localhost:3000/story" method="post" enctype="multipart/form-data"> -->
+   <ul class="navbar navbar-default" id="home">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button><a class="navbar-brand navbar-link" href="#"><span class="glyphicon glyphicon-home"></span>Home</a></div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active" role="presentation"><a href="#" id="Home" class="Home"><span class="glyphicon glyphicon-thumbs-up"></span> Đăng kí</a></li>
+                    <li role="presentation"><a href="#p4"><span class="glyphicon glyphicon-send"> ĐóngGópTruyện</a></li>
+                    <li role="presentation"><a href="#p3"><span class="glyphicon glyphicon-phone-alt"></span> Liên Lạc</a></li>
+                </ul>
+            </div>
+        </div>
+    </ul>
+	<div class="Page1" id="p1">
+	    <div class="jumbotron " >
+             <h1>Chào mừng bạn đến với</h1> 
+			 <h1>Web đọc truyện</h1>
+             <p>Bạn đã sẵn sàng</p> 
+			 <p>Hãy cùng bắt đầu đến với những mẩu truyện thú vị nào!</p>
+             <p><a class="btn btn-primary btn-lg" href="#p2" role="button">Let'Go</a></p>
+        </div>
+	</div>
+	<div class="Page2" id="p2">
+	    <a href="#home"><button type="button" class="btn btn-info"><span class="glyphicon glyphicon-hand-up"> Quaylại</button></a>
+		<button id="story" class="btn btn-primary large">New Story</button>
+        <div class="row story">
+            <div class="col-md-12">
+                <h2 class="title"><em id="title"></h2>
+				<h3 id="message"></h3>
+            </div>
+        </div>	
+	</div>
+	<div class="Page3" id="p3">
+	    <a href="#home"><button type="button" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-hand-up"> Quaylại</span></button></a>
+		<div class="box text-center">
+		<h1 style="font-size: 7em" >Contact Me</h1>
+		<button type="button" class="btn btn-primary">FaceBook</button>
+		<button type="button" class="btn btn-success">Gmail</button>
+		<h2>WorkPlace: Ha noi university of science and technology</h2>
+		</div>
+	</div>
+	<div class="Page4" id="p4">
+	    <a href="#home"><button type="button" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-hand-up"> Quaylại</span></button></a> 
+	    <form>
+            <div class="form-group">
+               <label for="exampleInputEmail1">Tilte</label>
+               <input type="email" class="form-control" id="newTitle" placeholder="Input newTitle">
+            </div>
+            <div class="form-group">
+               <label for="exampleInputPassword1">Story</label>
+               <input type="email" class="form-control" id="newStory" placeholder="Input newStory">
+            </div>
+			<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-pencil">ĐóngGóp</span></button>
+        </form>
+	</div>
+	
+	<script src="js/scrips.js"> </script>
+</form>	
+</body>  
+</html> 

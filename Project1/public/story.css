@@ -1,0 +1,66 @@
+.body {
+  background-color: silver;
+}
+.navbar-default{
+	position: fixed;
+}
+.Page1{
+	text-align: Center;
+	padding: 40px;
+	background: url("https://cdn3.tgdd.vn/Files/2017/02/06/945930/4_1280x720.jpg") no-repeat;
+	background-size: cover;
+	height:600px;
+}
+.jumbotron{
+	border-radius: 20px;
+	padding:40px;
+	opacity:0.75;
+}
+.Page2{
+	padding:100px;
+	background: url("http://file.vforum.vn/hinh/2015/09/vforum-hinh-nen-thang-10-nam-2015-12.jpg") no-repeat;
+	background-size: cover;
+	height:750px;
+}
+
+.story {
+	font-family:Lobster;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    background: #FFFFFF;
+	opacity:0.75;
+}
+.title {
+  padding-left: 200px;
+}
+.Page3{
+	padding:100px;
+	background:url("http://media.designs.vn/public/media/media/picture/16-07-2014/ban-lam-viec-grovemade-08.jpg") no-repeat;
+    height:700px;
+	background-size: cover;
+}
+.box{
+	padding:20px;
+	height:200px;
+	font-family:Pacifico;
+	padding-bottom:150px;
+}
+
+.Page4{
+	padding:100px;
+	background:url("http://www.thecoderway.com/administrater/resource/images/project_portfolio/589852fb49e88.jpg") no-repeat;
+    height:700px;
+	background-size: cover;
+}
+.form-group{
+    font-size:3em;
+}
+
+
+
+
+
+
+
